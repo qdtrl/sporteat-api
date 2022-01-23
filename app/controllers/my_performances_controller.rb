@@ -3,8 +3,15 @@ class MyPerformancesController < ApplicationController
 
   def index
     @performances = MyPerformance.where(user_id: current_user.id)
-    
-    render json: @performances
+    @exercices = [];
+    @performances.each do |perfomance|
+      if @exercices.include?(perfomance.exercice)
+        next
+      else
+        @exercices.append(perfomance.exercice)
+      end
+    end
+    render json: { performances: @performances, exercices: @exercices.sort }, status: 200
   end
 
   def create

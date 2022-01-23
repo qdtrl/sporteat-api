@@ -70,13 +70,6 @@ class GenWods
       generate_warm_up
       generate_building
     end
-    # puts "#"*10
-    # puts "#"*10
-    # @wod[1][:set].each do |ex|
-    #   puts ex
-    # end
-    # puts "#"*10
-    # puts "#"*10
     return @wod
   end
 end
