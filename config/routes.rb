@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :my_performances, only: [:index, :create]
   resources :my_equipements, only: [:index, :update, :destroy]
   resources :equipements, only: [:index]
-
+  resources :exercices, only: [:index, :show]
   resources :wods, only: [:index, :create]
 
   # USER
