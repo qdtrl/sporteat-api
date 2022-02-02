@@ -1,7 +1,6 @@
 class MealsController < ApplicationController
   def index
     @meals = Meal.all
-
     render json: @meals
   end
   
@@ -11,7 +10,6 @@ class MealsController < ApplicationController
     render json: { meal: @meal, ingredients: @meal.ingredients }
   end
   
-    
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_meal
