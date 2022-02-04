@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :my_equipements, only: [:index, :update, :destroy]
   resources :equipements, only: [:index]
   resources :exercices, only: [:index, :show]
-  resources :wods, only: [:index, :create]
+  resources :wods, only: [:index, :create, :destroy]
 
   # USER
   namespace :api, defaults: { format: :json } do

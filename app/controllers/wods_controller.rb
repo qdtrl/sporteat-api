@@ -6,7 +6,8 @@ class WodsController < ApplicationController
     [
       { 
         wod: 
-        { 
+        {
+          id: 1, 
           name:  "Mon Wod de Ouf du bas du corps",
           calories: 231
         }, 
@@ -35,6 +36,7 @@ class WodsController < ApplicationController
       {
         wod: 
         { 
+          id: 2,
           name:  "Mon Wod de Ouf du haut du corps",
           calories: 231
         }, 
@@ -68,6 +70,10 @@ class WodsController < ApplicationController
   def create
     @wod = GenWods.new(current_user).perform
     render json: { wod: @wod }
+  end
+
+  def destroy
+    puts "Boom"
   end
 
   private
